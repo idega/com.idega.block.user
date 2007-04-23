@@ -1,0 +1,15 @@
+<document>
+  <properties>
+    <title>Filter changes</title>
+    <author email="eiki@idega.is">Eirikur Hrafnsson</author>
+  </properties>
+  <body>
+  
+	<release version="3.1.0" date="2007-03-20">
+      <action dev="eiki" type="update">
+      	First version for ePlatform 3.1, merging stuff from platform 2
+      </action>  
+    </release>
+    
+  </body>
+</document>
