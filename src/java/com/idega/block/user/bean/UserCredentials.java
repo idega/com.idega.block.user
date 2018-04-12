@@ -2,8 +2,6 @@ package com.idega.block.user.bean;
 
 import java.io.Serializable;
 
-import com.idega.util.Encrypter;
-
 public class UserCredentials implements Serializable {
 
 	private static final long serialVersionUID = 2640925255189077774L;
@@ -14,15 +12,18 @@ public class UserCredentials implements Serializable {
 
 	private boolean enabled = false;
 
+	private Integer userId;
+
 	public UserCredentials() {
 		super();
 	}
 
-	public UserCredentials(String username, String password, boolean enabled) {
+	public UserCredentials(Integer userId, String username, String password, boolean enabled) {
 		this();
 
+		this.userId = userId;
 		this.username = username;
-		this.password = Encrypter.encryptOneWay(password);
+		this.password = password;
 		this.enabled = enabled;
 	}
 
@@ -48,6 +49,14 @@ public class UserCredentials implements Serializable {
 
 	public void setEnabled(boolean enabled) {
 		this.enabled = enabled;
+	}
+
+	public final Integer getUserId() {
+		return userId;
+	}
+
+	public final void setUserId(Integer userId) {
+		this.userId = userId;
 	}
 
 }
