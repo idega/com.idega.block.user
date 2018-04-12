@@ -88,4 +88,6 @@ public interface UserCredentialsDAO {
 
 	UserCredentials getUserCredentials(String username);
 
+	UserCredentials getUserCredentials(String username, String password);
+
 }
