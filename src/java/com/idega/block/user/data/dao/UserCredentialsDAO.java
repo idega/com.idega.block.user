@@ -86,8 +86,6 @@ import com.idega.block.user.bean.UserCredentials;
 
 public interface UserCredentialsDAO {
 
-	UserCredentials getUserCredentials(String username);
-
 	UserCredentials getUserCredentials(String username, String password);
 
 }
