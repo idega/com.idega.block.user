@@ -83,9 +83,14 @@
 package com.idega.block.user.data.dao;
 
 import com.idega.block.user.bean.UserCredentials;
+import com.idega.block.user.bean.UserInfo;
+import com.idega.presentation.IWContext;
+import com.idega.user.data.User;
 
 public interface UserCredentialsDAO {
 
 	UserCredentials getUserCredentials(String username, String password);
+
+	UserInfo getUserInfo(IWContext iwc, User user);
 
 }
